@@ -3672,7 +3672,7 @@ namespace Photon.Realtime
         /// </remarks>
         /// <param name="debugMessage">Contains a debug message why authentication failed. This has to be fixed during development.</param>
         void OnCustomAuthenticationFailed(string debugMessage);
-
+        void OnRoomListUpdate(List<RoomInfo> roomlist);
     }
 
 
@@ -4126,6 +4126,11 @@ namespace Photon.Realtime
             {
                 target.OnCustomAuthenticationFailed(debugMessage);
             }
+        }
+
+        public void OnRoomListUpdate(List<RoomInfo> roomlist)
+        {
+            throw new NotImplementedException();
         }
     }
 
